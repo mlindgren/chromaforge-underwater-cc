@@ -79,7 +79,7 @@ runs only the check.
 In the app: File ▸ Plug-ins ▸ Plug-in Manager… ▸ install `underwater-cc.wasm`. From the CLI:
 
 ```bash
-lcc-cli run plugin.install path=/path/to/underwater-cc.wasm
+chromaforge-cli run plugin.install path=/path/to/underwater-cc.wasm
 ```
 
 Then, per photo: Develop ▸ Plug-in Filters ▸ add *Underwater Color Correction*, then **Measure**.
@@ -117,3 +117,15 @@ node tools/reference/make-reference.js ../uw-original
 ```
 
 `cargo run --release --example bench` (after `cargo xtask build`) times the module in the host.
+
+`tools/e2e.sh /path/to/chromaforge-cli OUT_DIR` runs the whole flow with the real CLI (install,
+add at each stage, measure with `wait: true`, export) on the example images (needs Python + Pillow
+to crop them).
+
+## Which stage?
+
+On JPEGs the two stages give practically the same picture (the measurement is taken on the
+same pixels either way), and Display is several times cheaper per render (no curve
+conversions). Display is the default. Note the measurement is always taken on the source frame,
+before any develop adjustment: after big White Balance or Exposure changes in the Display stage,
+measure again or use the Source stage, where measurement and filter see the same pixels.
