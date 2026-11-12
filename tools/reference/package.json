@@ -1,0 +1,10 @@
+{
+  "name": "underwater-cc-reference",
+  "private": true,
+  "description": "Runs the original JS algorithm to produce the parity-test fixtures",
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "jpeg-js": "0.4.4",
+    "pngjs": "7.0.0"
+  }
+}
