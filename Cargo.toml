@@ -6,6 +6,7 @@ rust-version = "1.88"
 license = "GPL-3.0-only"
 description = "Underwater color correction as a Chromaforge pixel filter (PhotoCraft plug-in ABI v1, WebAssembly). Rust port of nikolajbech/underwater-image-color-correction."
 readme = "README.md"
+repository = "https://github.com/mlindgren/chromaforge-underwater-cc"
 keywords = ["underwater", "color-correction", "wasm", "photo", "plugin"]
 categories = ["multimedia::images"]
 publish = false

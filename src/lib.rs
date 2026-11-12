@@ -56,6 +56,7 @@ pub const MANIFEST: &str = concat!(
     r#""author":"Nikolaj Bech Andersen (algorithm); underwater-cc contributors (Rust/WebAssembly port)","#,
     r#""license":"GPL-3.0-only","#,
     r#""homepage":"https://github.com/nikolajbech/underwater-image-color-correction","#,
+    r#""repository":"https://github.com/mlindgren/chromaforge-underwater-cc","#,
     r#""overlap":0,"#,
     r#""stage":"display","#,
     r#""params":{"#,

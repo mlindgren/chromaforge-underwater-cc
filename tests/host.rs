@@ -205,6 +205,10 @@ fn the_host_reads_the_manifest() {
     assert_eq!(m.stage, Some(Stage::Display));
     assert!(m.dropped.is_empty(), "the host dropped {:?}", m.dropped);
     assert_eq!(m.about.license.as_deref(), Some("GPL-3.0-only"));
+    assert_eq!(
+        m.about.repository.as_deref(),
+        Some(env!("CARGO_PKG_REPOSITORY"))
+    );
     assert!(f.has_analyze() && !f.has_merge());
     let names: Vec<&str> = m.params.iter().map(|(k, _)| k.as_str()).collect();
     assert_eq!(names, ["intensity", "minAvgRed"]);

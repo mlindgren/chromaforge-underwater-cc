@@ -61,7 +61,7 @@ the original reads from a canvas, so it gives the original's matrix to within 1e
 | `intensity` | number 0..150 | 100 | 0 = off, 100 = the original's correction, above 100 extrapolates |
 | `minAvgRed` | number 0..128 | 60 | the hue-shift target (the original's `minAvgRed`); it is read when measuring, so **measure again after changing it** |
 
-The manifest asks for the **Display** stage (`"stage": "display"`), `overlap: 0`.
+The manifest links this repository (`repository`) and the original (`homepage`), and asks for the **Display** stage (`"stage": "display"`), `overlap: 0`.
 
 ## Build
 
